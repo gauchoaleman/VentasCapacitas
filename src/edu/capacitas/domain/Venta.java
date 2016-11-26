@@ -10,7 +10,7 @@ import java.util.List;
 public class Venta {
     private Long id;
     private Calendar fecha;
-    private float total;
+    private Float total;
     private Cliente cliente;
     private List<Producto> listaProductos;
 
@@ -59,7 +59,7 @@ public class Venta {
         SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm");
         return "Venta{" +
                 "id=" + id +
-                ", Fechae=" + df.format(fecha.getTime()) +
+                ", Fecha=" + df.format(fecha.getTime()) +
                 ", Total=" + total +
                 ", Cliente=" + cliente+
                 ", Productos=" + listaProductos +
