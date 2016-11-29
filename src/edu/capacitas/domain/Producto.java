@@ -1,6 +1,8 @@
 package edu.capacitas.domain;
 
 
+import edu.capacitas.app.FuncionesVariadas;
+
 /**
  * Created by Stefan on 25/11/2016.
  */
@@ -33,7 +35,8 @@ public class Producto {
         this.precio = precio;
     }
 
-    @Override
+
+
     public String toString() {
 
         return "Producto{" +
