@@ -28,7 +28,7 @@ public abstract class FuncionesVariadas {
         return entrada;
     }
 
-    public static int pedirNumeroPositivo() {
+    public static long pedirNumeroPositivo() {
         String numero;
         boolean ok;
         Scanner reader;
@@ -38,7 +38,21 @@ public abstract class FuncionesVariadas {
             ok = false;
             return -1;
         } else {
-            return Integer.parseInt(numero);
+            return Long.parseLong(numero);
+        }
+    }
+
+    public static int pedirNumeroPositivoInt() {
+        String numero;
+        boolean ok;
+        Scanner reader;
+        reader = new Scanner(System.in);
+        numero = reader.next();
+        if (!isNumeric(numero)) {
+            ok = false;
+            return -1;
+        } else {
+            return  Integer.parseInt(numero);
         }
     }
 
