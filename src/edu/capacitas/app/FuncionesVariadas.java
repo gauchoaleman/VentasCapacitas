@@ -76,11 +76,6 @@ public abstract class FuncionesVariadas {
         Scanner reader;
         reader = new Scanner(System.in);
         numero = reader.next();
-        if (!isNumeric(numero)) {
-            ok = false;
-            return Float.parseFloat("0");
-        } else {
-            return Float.parseFloat(numero);
+        return Float.parseFloat(numero);
         }
     }
-}

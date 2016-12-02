@@ -62,7 +62,7 @@ public class App {
         System.out.println("Cuántos productos?");
         long ctdProductos = FuncionesVariadas.pedirNumeroPositivo();
 
-        for( int i=0,prodnro=1;i<ctdProductos;i++,prodnro++) {
+        for( int i=0,prodnro=1;i<ctdProductos;i=i+1,prodnro=prodnro+1) {
             System.out.println("Producto Nro. "+prodnro);
             listaProductos.add(leerProducto());
         }
@@ -72,7 +72,7 @@ public class App {
         venta.setCliente(agregarCliente());
         venta.setTotal(obtenerTotal(listaProductos));
 
-        System.out.println("Fecha de nacimiento:");
+        System.out.println("Fecha:");
         System.out.println("Día:");
         Integer dia = FuncionesVariadas.pedirNumeroPositivoInt();
         System.out.println("Mes:");
@@ -110,7 +110,7 @@ public class App {
     }
 
     private static void mostrarProductos(List<Producto> listaProductos){
-        System.out.println("******Productos");
+        System.out.println("******listaProductos");
         if (listaProductos.size() > 0) {
             for(int i=0; i<listaProductos.size(); i++){
                 System.out.println("********Id: "+listaProductos.get(i).getId());
@@ -128,7 +128,7 @@ public class App {
     public static Producto leerProducto(){
         long id;
         Producto producto = new Producto();
-        System.out.println("*****Datos Productos*****");
+
         System.out.println("Ingrese Id:");
         id = FuncionesVariadas.pedirNumeroPositivo();
         while( id<0 )
@@ -140,7 +140,11 @@ public class App {
         System.out.println("Nombre:");
         producto.setNombre(FuncionesVariadas.pedirEntrada());
         System.out.println("Precio: ");
-        producto.setPrecio(FuncionesVariadas.pedirFlotante());
+
+
+        Float precio;
+        precio = FuncionesVariadas.pedirFlotante();
+        producto.setPrecio(precio);
 
         return producto;
     }
